@@ -50,10 +50,19 @@ document.querySelector("#mute").addEventListener("click", function() {
 
 });
 
-document.querySelector("#mute").addEventListener("click", function() {
-	
-
+document.querySelector("#slider").addEventListener("click", function() {
+	var val = document.querySelector("#slider").value;
+	video.volume = val/100;
+	volume.innerHTML = (val + "%");
+	console.log(video.volume);
 });
 
+document.querySelector("#vintage").addEventListener("click", function(){
+	video.classList.add("oldSchool");
+});
+
+document.querySelector("#orig").addEventListener("click", function(){
+	video.classList.remove("oldSchool");
+});
 
 
